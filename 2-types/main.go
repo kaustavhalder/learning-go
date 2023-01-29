@@ -11,4 +11,8 @@ func main() {
 	fmt.Println(x)
 	x = true
 	fmt.Println(x)
+	a := 42
+	b := 33
+
+	fmt.Println(a == b)
 }
