@@ -18,13 +18,18 @@ func main() {
 	// x := type {values} composite literal
 	x := []int{2, 4, 8, 10, 12, 22, 33}
 	fmt.Println("this is the slice", x)
-	for i, v := range x {
-		fmt.Println("Index", i, v)
-	}
-	fmt.Println(x[0:1])
-	fmt.Println(x[1:])
-	for i := 0; i < len(x); i++ {
-		fmt.Println("slice from for loop")
-		fmt.Println(x[i])
-	}
+	// for i, v := range x {
+	// 	fmt.Println("Index", i, v)
+	// }
+	// fmt.Println(x[0:1])
+	// fmt.Println(x[1:])
+	// for i := 0; i < len(x); i++ {
+	// 	fmt.Println("slice from for loop")
+	// 	fmt.Println(x[i])
+	// }
+	x = append(x, 44)
+	fmt.Println("this is the slice after 44", x)
+	y := []int{98, 87, 65, 53}
+	x = append(x, y...)
+	fmt.Println("this is the slice after appending another slice", x)
 }
