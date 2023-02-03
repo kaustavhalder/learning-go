@@ -6,10 +6,20 @@ import (
 
 func main() {
 	fmt.Println("this section is for arrays and slices")
+
+	// Arrays
 	// var x [5]int
 	// fmt.Println(x)
 	// x[0] = 9
 	// fmt.Println(x)
 	// fmt.Println(len(x))
 
+	// Slice
+	// x := type {values} composite literal
+	x := []int{2, 4, 8, 10, 12, 22, 33}
+	fmt.Println("this is the slice", x)
+	for i, v := range x {
+		fmt.Println("Index", i, v)
+	}
+	fmt.Println(x[0:1])
 }
