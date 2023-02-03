@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	fmt.Println("this section is for arrays and slices")
+	fmt.Println("this section is for arrays and slices and structs and maps and all other stuff")
 
 	// Arrays
 	// var x [5]int
@@ -22,4 +22,9 @@ func main() {
 		fmt.Println("Index", i, v)
 	}
 	fmt.Println(x[0:1])
+	fmt.Println(x[1:])
+	for i := 0; i < len(x); i++ {
+		fmt.Println("slice from for loop")
+		fmt.Println(x[i])
+	}
 }
