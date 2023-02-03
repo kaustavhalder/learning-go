@@ -30,6 +30,6 @@ func main() {
 	x = append(x, 44)
 	fmt.Println("this is the slice after 44", x)
 	y := []int{98, 87, 65, 53}
-	x = append(x, y...)
+	x = append(x, y...) // this is sort of an unpacking operation being done on the slice and or any datatypes
 	fmt.Println("this is the slice after appending another slice", x)
 }
