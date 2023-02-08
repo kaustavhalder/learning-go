@@ -43,16 +43,25 @@ func main() {
 		"Novak": 27,
 		"Roger": 33,
 	}
+	n := map[int]string{
+		1: "Vlad",
+		2: "Nikolai",
+		3: "Aleksi",
+	}
+	fmt.Println(n)
 	fmt.Println(m)
 	fmt.Println(m["James"])
 	fmt.Println(m["Roger"]) // Zero value is returned
 	v, ok := m["Roger"]
 	fmt.Println(v)
 	fmt.Println(ok)
+	// comma, ok syntax 
 	if v, ok := m["Roger"]; ok {
 		fmt.Print("PRint ", v)
 	}
 	m["Andrei"] = 44
 	fmt.Println(m)
+	n[4] = "Whiskey"
+	// fmt.Println(n)
 
 }
