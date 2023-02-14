@@ -15,6 +15,8 @@ type secretAgent struct {
 	ltk bool
 }
 
+// Anonymous Structs
+
 func main() {
 	fmt.Println("this section is for structs")
 	p1 := person{
@@ -33,5 +35,20 @@ func main() {
 		ltk: true,
 	}
 	fmt.Println(sAgent)
+
+	// Anonymous Structs 
+	// no need for a placeholder
+	// where to use this 
+	
+	p3 := struct {
+		first string
+		last  string
+		age   int
+	}{
+		first: "Vlad",
+		last:  "rod",
+		age:   33,
+	}
+	fmt.Println(p3)
 
 }
