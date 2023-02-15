@@ -13,8 +13,14 @@ func bar(s string) {
 	fmt.Println("hello", s)
 }
 
+func woo(s string) string {
+	return "Wooo"
+}
 func main() {
+
 	fmt.Println("this is for functions")
 	foo()
 	bar("Kevin")
+	s := woo("ALALAL")
+	fmt.Println(s)
 }
