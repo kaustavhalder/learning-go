@@ -16,11 +16,18 @@ func bar(s string) {
 func woo(s string) string {
 	return "Wooo"
 }
-func main() {
 
+func test(fn string, ln string) (string, bool) {
+	fmt.Println("this is from te test fucntion")
+	return fn, false
+}
+func main() {
 	fmt.Println("this is for functions")
 	foo()
 	bar("Kevin")
 	s := woo("ALALAL")
 	fmt.Println(s)
+	x, y := test("Vlad", "Rodmanavich")
+	fmt.Println(x)
+	fmt.Println(y)
 }
