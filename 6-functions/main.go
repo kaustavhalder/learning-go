@@ -27,10 +27,19 @@ import "fmt"
 // }
 
 // Variadic Parameters
-func foo(x ...int) {
+// Number of arguments can be zero or more
+func sum(x ...int) int {
 	fmt.Println(x)
 	// Transforms all the things to a slice
+	sum := 0
+	for i, v := range x {
+		fmt.Println("i: ", i, "v: ", v)
+		sum += v
+	}
+	return sum
 }
+
+// Unfurling a slice
 
 func main() {
 	fmt.Println("this is for functions")
@@ -42,5 +51,10 @@ func main() {
 	// x, y := test("Vlad", "Rodmanavich")
 	// fmt.Println(x)
 	// fmt.Println(y)
-	foo(1,2,3,4,5,4,4,4,45)
+	// total := sum(1, 2, 3, 4, 5, 4, 4, 4, 45)
+	// fmt.Println("Total is ", total)
+	xi := []int{1, 2, 4, 5, 6, 4, 55}
+	// Calling and unfurl
+	total := sum(xi...)
+	fmt.Println("Total is ", total)
 }
