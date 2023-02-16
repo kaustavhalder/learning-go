@@ -23,7 +23,7 @@ func woo(s string) string {
 // Different return type , match the funtion signature
 func test(fn string, ln string) (string, bool) {
 	fmt.Println("this is from te test fucntion")
-	return fn, false
+	return fn, true
 }
 func main() {
 	fmt.Println("this is for functions")
