@@ -9,14 +9,18 @@ func foo() {
 	fmt.Println("this is called from foo")
 }
 
+// Paramters defined below
 func bar(s string) {
 	fmt.Println("hello", s)
 }
 
+// Retrun types are defined below
 func woo(s string) string {
 	return "Wooo"
 }
 
+// Retrun types are defined below
+// Different return type , match the funtion signature
 func test(fn string, ln string) (string, bool) {
 	fmt.Println("this is from te test fucntion")
 	return fn, false
