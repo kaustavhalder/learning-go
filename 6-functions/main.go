@@ -28,18 +28,26 @@ import "fmt"
 
 // Variadic Parameters
 // Number of arguments can be zero or more
-func sum(x ...int) int {
-	fmt.Println(x)
-	// Transforms all the things to a slice
-	sum := 0
-	for i, v := range x {
-		fmt.Println("i: ", i, "v: ", v)
-		sum += v
-	}
-	return sum
-}
+// Should always be the final parameter of the function signature
+// func sum(x ...int) int {
+// 	fmt.Println(x)
+// 	// Transforms all the things to a slice
+// 	sum := 0
+// 	for i, v := range x {
+// 		fmt.Println("i: ", i, "v: ", v)
+// 		sum += v
+// 	}
+// 	return sum
+// }
 
-// Unfurling a slice
+// Defered Functions
+// Defer and execution of a function
+func foo() {
+	fmt.Println("foo")
+}
+func bar() {
+	fmt.Println("bar")
+}
 
 func main() {
 	fmt.Println("this is for functions")
@@ -53,8 +61,15 @@ func main() {
 	// fmt.Println(y)
 	// total := sum(1, 2, 3, 4, 5, 4, 4, 4, 45)
 	// fmt.Println("Total is ", total)
-	xi := []int{1, 2, 4, 5, 6, 4, 55}
-	// Calling and unfurl
-	total := sum(xi...)
-	fmt.Println("Total is ", total)
+
+	// // Unfurling a slice
+	// xi := []int{1, 2, 4, 5, 6, 4, 55}
+	// // Calling and unfurl
+	// total := sum(xi...)
+	// fmt.Println("Total is ", total)
+
+	// Defered
+	defer foo()
+	bar()
+
 }
