@@ -70,18 +70,31 @@ import "fmt"
 // 	fmt.Println("Hello my name is ", s.first, " ", s.last)
 // }
 
-
 // Interfaces and polymorphism
 // Interfaces help us to define behaviour
 
-type person struct{
+type person struct {
 	first string
-	last string
+	last  string
 }
 
-type secretAgent struct{
+type secretAgent struct {
 	person
 	ltk bool
+}
+
+func (s secretAgent) speak() {
+	fmt.Println("hello my name is ", s.first, s.last)
+}
+
+type human interface {
+	// this means
+	// a value can be of more that one type
+	speak()
+}
+
+func bar(h human) {
+	fmt.Println("this is called a human")
 }
 
 func main() {
@@ -118,4 +131,14 @@ func main() {
 	// fmt.Println(sa)
 	// sa.speak()
 
+	// Interfaces and Polymorphism
+	sa := secretAgent{
+		person: person{
+			"james",
+			"bond",
+		},
+		ltk: true,
+	}
+	fmt.Println(sa)
+	sa.speak()
 }
