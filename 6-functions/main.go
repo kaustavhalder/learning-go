@@ -87,6 +87,10 @@ func (s secretAgent) speak() {
 	fmt.Println("hello my name is ", s.first, s.last)
 }
 
+func (p person) speak() {
+	fmt.Println("hello my name is ", p.first, p.last, "--from person function")
+}
+
 type human interface {
 	// this means
 	// a value can be of more that one type
@@ -94,7 +98,7 @@ type human interface {
 }
 
 func bar(h human) {
-	fmt.Println("this is called a human")
+	fmt.Println("this is called a human from bar fucntion")
 }
 
 func main() {
@@ -141,4 +145,13 @@ func main() {
 	}
 	fmt.Println(sa)
 	sa.speak()
+
+	p1 := person{
+		first: "james",
+		last:  "gosling",
+	}
+	fmt.Println(p1)
+	p1.speak()
+	bar(p1)
+	bar(sa)
 }
