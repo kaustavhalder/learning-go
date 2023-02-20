@@ -42,11 +42,32 @@ import "fmt"
 
 // Defered Functions
 // Defer and execution of a function
-func foo() {
-	fmt.Println("foo")
+// func foo() {
+// 	fmt.Println("foo")
+// }
+// func bar() {
+// 	fmt.Println("bar")
+// }
+
+// Methods
+
+// Create a new struct
+
+type person struct {
+	first string
+	last  string
 }
-func bar() {
-	fmt.Println("bar")
+
+type secretAgent struct {
+	person
+	ltk bool
+}
+
+// Below snippet is an example of a receiver attached to a function
+// when a receiver is defined, it is attached to the afore mentioned struct
+// and any new created struct has access to this function through the dot notation
+func (s secretAgent) speak() {
+	fmt.Println("Hello my name is ", s.first, " ", s.last)
 }
 
 func main() {
@@ -69,7 +90,18 @@ func main() {
 	// fmt.Println("Total is ", total)
 
 	// Defered
-	defer foo()
-	bar()
+	// defer foo()
+	// bar()
+
+	//Attaching methods to a struct
+	sa := secretAgent{
+		person: person{
+			"james",
+			"bond",
+		},
+		ltk: true,
+	}
+	fmt.Println(sa)
+	sa.speak()
 
 }
