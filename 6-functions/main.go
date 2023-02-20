@@ -53,22 +53,22 @@ import "fmt"
 
 // Create a new struct
 
-type person struct {
-	first string
-	last  string
-}
+// type person struct {
+// 	first string
+// 	last  string
+// }
 
-type secretAgent struct {
-	person
-	ltk bool
-}
+// type secretAgent struct {
+// 	person
+// 	ltk bool
+// }
 
 // Below snippet is an example of a receiver attached to a function
 // when a receiver is defined, it is attached to the afore mentioned struct
 // and any new created struct has access to this function through the dot notation
-func (s secretAgent) speak() {
-	fmt.Println("Hello my name is ", s.first, " ", s.last)
-}
+// func (s secretAgent) speak() {
+// 	fmt.Println("Hello my name is ", s.first, " ", s.last)
+// }
 
 func main() {
 	fmt.Println("this is for functions")
@@ -94,14 +94,14 @@ func main() {
 	// bar()
 
 	//Attaching methods to a struct
-	sa := secretAgent{
-		person: person{
-			"james",
-			"bond",
-		},
-		ltk: true,
-	}
-	fmt.Println(sa)
-	sa.speak()
+	// sa := secretAgent{
+	// 	person: person{
+	// 		"james",
+	// 		"bond",
+	// 	},
+	// 	ltk: true,
+	// }
+	// fmt.Println(sa)
+	// sa.speak()
 
 }
