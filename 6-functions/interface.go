@@ -26,3 +26,6 @@ func (p person) speakPerson() {
 type humanInterface interface {
 	speak()
 }
+
+
+// Anonymous functions
