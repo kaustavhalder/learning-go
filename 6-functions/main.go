@@ -75,33 +75,33 @@ import (
 // Interfaces and polymorphism
 // Interfaces help us to define behaviour
 
-type person struct {
-	first string
-	last  string
-}
+// type person struct {
+// 	first string
+// 	last  string
+// }
 
-type secretAgent struct {
-	person
-	ltk bool
-}
+// type secretAgent struct {
+// 	person
+// 	ltk bool
+// }
 
-func (s secretAgent) speak() {
-	fmt.Println("hello my name is ", s.first, s.last)
-}
+// func (s secretAgent) speak() {
+// 	fmt.Println("hello my name is ", s.first, s.last)
+// }
 
-func (p person) speak() {
-	fmt.Println("hello my name is ", p.first, p.last, "--from person function")
-}
+// func (p person) speak() {
+// 	fmt.Println("hello my name is ", p.first, p.last, "--from person function")
+// }
 
-type human interface {
-	// this means
-	// a value can be of more that one type
-	speak()
-}
+// type human interface {
+// 	// this means
+// 	// a value can be of more that one type
+// 	speak()
+// }
 
-func bar(h human) {
-	fmt.Println("this is called a human from bar fucntion")
-}
+// func bar(h human) {
+// 	fmt.Println("this is called a human from bar fucntion")
+// }
 
 func main() {
 	fmt.Println("this is for functions")
@@ -138,22 +138,27 @@ func main() {
 	// sa.speak()
 
 	// Interfaces and Polymorphism
-	sa := secretAgent{
-		person: person{
-			"james",
-			"bond",
-		},
-		ltk: true,
-	}
-	fmt.Println(sa)
-	sa.speak()
+	// sa := secretAgent{
+	// 	person: person{
+	// 		"james",
+	// 		"bond",
+	// 	},
+	// 	ltk: true,
+	// }
+	// fmt.Println(sa)
+	// sa.speak()
 
-	p1 := person{
-		first: "james",
-		last:  "gosling",
-	}
-	fmt.Println(p1)
-	p1.speak()
-	bar(p1)
-	bar(sa)
+	// p1 := person{
+	// 	first: "james",
+	// 	last:  "gosling",
+	// }
+	// fmt.Println(p1)
+	// p1.speak()
+	// bar(p1)
+	// bar(sa)
+
+	// anonymous funcions
+	func() {
+		fmt.Println("this is an anonymous block")
+	}()
 }
