@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // Functions in GO are always pass by value and not reference
 // GO is typically not oop oriented, but there are oop features
