@@ -1,5 +1,8 @@
 package main
 
+// to import a package, this needs to be inited with go.mod
+// dependency management is done by go.sum
+
 import "fmt"
 
 type personA struct {
