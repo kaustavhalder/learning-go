@@ -11,21 +11,20 @@ type personA struct {
 }
 
 type secretAgentA struct {
-	person
+	personA
 	ltk bool
 }
 
-func (s secretAgent) speakAgent() {
+func (s secretAgentA) speakAgent() {
 	fmt.Println("this is from speak fucntion", s.first, s.last)
 }
 
-func (p person) speakPerson() {
+func (p personA) speakPerson() {
 	fmt.Println("this is from speak fucntion", p.first, p.last)
 }
 
 type humanInterface interface {
 	speak()
 }
-
 
 // Anonymous functions
