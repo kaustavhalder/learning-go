@@ -158,7 +158,15 @@ func main() {
 	// bar(sa)
 
 	// anonymous funcions
-	func() {
-		fmt.Println("this is an anonymous block")
-	}()
+	// func() {
+	// 	fmt.Println("this is an anonymous block")
+	// }()
+
+	// Function expression
+
+	f := func() {
+		fmt.Println("this is from the function expression")
+	}
+	f()
+
 }
