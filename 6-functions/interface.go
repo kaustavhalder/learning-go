@@ -5,21 +5,21 @@ package main
 
 import "fmt"
 
-type personA struct {
+type person struct {
 	first string
 	last  string
 }
 
-type secretAgentA struct {
-	personA
+type secretAgent struct {
+	person
 	ltk bool
 }
 
-func (s secretAgentA) speakAgent() {
+func (s secretAgent) speakAgent() {
 	fmt.Println("this is from speak fucntion", s.first, s.last)
 }
 
-func (p personA) speakPerson() {
+func (p person) speakPerson() {
 	fmt.Println("this is from speak fucntion", p.first, p.last)
 }
 
