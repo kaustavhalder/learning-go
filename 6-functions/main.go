@@ -16,6 +16,10 @@ func main() {
 	bar()
 	b2 := bar2()
 	fmt.Println(b2())
+	ii := []int{2, 5, 5, 5}
+	su := sum(ii...)
+	fmt.Println(su)
+
 }
 
 // Returning a string
@@ -36,4 +40,25 @@ func bar2() func() string {
 		fmt.Println("Alibaba")
 		return "Alibaba"
 	}
+}
+
+// Callback
+// Passing a function as a parameter eg: JavaScript
+
+func sum(x ...int) int {
+	total := 0
+	for _, v := range x {
+		total += v
+	}
+	return total
+}
+
+func even(f func(xi ...int) int, vi ...int) int {
+	var yi []int
+	for _, v := range vi {
+		if v%2 == 0 {
+			yi = append(yi, v)
+		}
+	}
+	f()
 }

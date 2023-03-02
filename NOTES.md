@@ -10,3 +10,4 @@
 - Anonymous functions
 - Function Expressions
 - Returning a funciton
+- Callback functions
