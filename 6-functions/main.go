@@ -6,14 +6,6 @@ import (
 
 func main() {
 	fmt.Println("this is the main function")
-	// sa := secretAgent{
-	// 	person: person{
-	// 		"james",
-	// 		"bond",
-	// 	},
-	// 	ltk: true,
-	// }
-	// fmt.Println(sa)
 
 	// Function Expression
 	f := func() {
@@ -22,7 +14,8 @@ func main() {
 	f()
 	foo()
 	bar()
-
+	b2 := bar2()
+	fmt.Println(b2())
 }
 
 // Returning a string
@@ -35,5 +28,12 @@ func foo() string {
 func bar() func() int {
 	return func() int {
 		return 451
+	}
+}
+
+func bar2() func() string {
+	return func() string {
+		fmt.Println("Alibaba")
+		return "Alibaba"
 	}
 }
