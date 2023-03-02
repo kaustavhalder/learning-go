@@ -6,7 +6,6 @@ import (
 
 func main() {
 	fmt.Println("this is the main function")
-
 	// sa := secretAgent{
 	// 	person: person{
 	// 		"james",
@@ -28,11 +27,11 @@ func main() {
 
 // Returning a string
 func foo() string {
-	s := "hello world"
-	return s
+	return "hello world"
 }
 
 // Returning a function
+// need to mention the return type of the inner function as well
 func bar() func() int {
 	return func() int {
 		return 451
