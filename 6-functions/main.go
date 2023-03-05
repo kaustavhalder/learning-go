@@ -52,13 +52,3 @@ func sum(x ...int) int {
 	}
 	return total
 }
-
-func even(f func(xi ...int) int, vi ...int) int {
-	var yi []int
-	for _, v := range vi {
-		if v%2 == 0 {
-			yi = append(yi, v)
-		}
-	}
-	f()
-}
