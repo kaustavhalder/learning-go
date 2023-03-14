@@ -58,13 +58,12 @@
 package main
 import "fmt"
 
+func printHw() string {
+    fmt.Println("Hello World")
+    return "hello world"
+}
+
 func main() {
     //Enter your code here. Read input from STDIN. Print output to STDOUT
-    var text string
-    count := 0
-    fmt.Scanln(&text)
-    for i := 0; i < len(text); i ++ {
-        count += 1
-    }
-    fmt.Println(count)
+    printHw()
 }
