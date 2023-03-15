@@ -53,17 +53,33 @@
 // 	return total
 // }
 
-
-
 package main
+
 import "fmt"
 
+// Single return type
 func printHw() string {
-    fmt.Println("Hello World")
-    return "hello world"
+	fmt.Println("Hello World")
+	return "hello world"
 }
 
+func baz(s string) {
+	fmt.Println("hello", s)
+}
+
+// Returning multiple return types
+func FullName(fn string, ln string) (string, bool) {
+	fullname := fn + " " + ln
+	return fullname, true
+}
+
+// Vairadic params
+
 func main() {
-    //Enter your code here. Read input from STDIN. Print output to STDOUT
-    printHw()
+	//Enter your code here. Read input from STDIN. Print output to STDOUT
+	printHw()
+	baz("Vlad")
+	name, status := FullName("Ian", "Flemming")
+	fmt.Println(name)
+	fmt.Println(status)
 }
