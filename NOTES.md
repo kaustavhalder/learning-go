@@ -11,3 +11,4 @@
 - Function Expressions
 - Returning a funciton
 - Callback functions
+- Closures and Recursion in Functions
