@@ -77,9 +77,15 @@ func FullName(fn string, ln string) (string, bool) {
 // ... means number of args is not given in function definition
 // turns them into a slice
 
-func foo(x ...int){
-    fmt.Println(x)
-    fmt.Printf("%T\n",x )
+func foo(x ...int) {
+	fmt.Println(x)
+	fmt.Printf("%T\n", x)
+	sum := 0
+	for i, v := range x {
+		fmt.Println("itmem", i, "value ", v)
+		sum += v
+	}
+	fmt.Println("Sum is ", sum)
 
 }
 
@@ -90,5 +96,5 @@ func main() {
 	name, status := FullName("Ian", "Flemming")
 	fmt.Println(name)
 	fmt.Println(status)
-    foo(2, 3 ,4 )
+	foo(2, 3, 4)
 }
