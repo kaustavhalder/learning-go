@@ -74,6 +74,14 @@ func FullName(fn string, ln string) (string, bool) {
 }
 
 // Vairadic params
+// ... means number of args is not given in function definition
+// turns them into a slice
+
+func foo(x ...int){
+    fmt.Println(x)
+    fmt.Printf("%T\n",x )
+
+}
 
 func main() {
 	//Enter your code here. Read input from STDIN. Print output to STDOUT
@@ -82,4 +90,5 @@ func main() {
 	name, status := FullName("Ian", "Flemming")
 	fmt.Println(name)
 	fmt.Println(status)
+    foo(2, 3 ,4 )
 }
