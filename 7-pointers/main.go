@@ -16,7 +16,6 @@ func main() {
 	fmt.Printf("%T\n", &a)
 	fmt.Println("Dereferencing")
 	fmt.Printf("%T\n", *&a)
-
 	name := "Vlad"
 	fmt.Println(name)
 	// Below gives us the memory location of the variable a
