@@ -4,6 +4,9 @@ import "fmt"
 
 func main() {
 	// Every type has its own pointer (type)
+	// everything in go is shared by value
+	// & gives us the memory address
+	// * dereferences and gives us the value from the pointer
 	fmt.Println("This section is for pointers")
 	a := 42
 	fmt.Println(a)
@@ -12,6 +15,8 @@ func main() {
 	fmt.Printf("%T\n", a)
 	// This is a pointer to the memory location
 	fmt.Printf("%T\n", &a)
+	fmt.Println("Dereferencing")
+	fmt.Printf("%T\n", *&a)
 
 	name := "Vlad"
 	fmt.Println(name)
