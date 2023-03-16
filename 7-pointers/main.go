@@ -11,7 +11,6 @@ func main() {
 	a := 42
 	fmt.Println(a)
 	// Below gives us the memory location of the variable a
-	fmt.Println(&a)
 	fmt.Printf("%T\n", a)
 	// This is a pointer to the memory location
 	fmt.Printf("%T\n", &a)
