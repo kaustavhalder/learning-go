@@ -23,4 +23,6 @@ func main() {
 	fmt.Printf("%T\n", name)
 	// This is a pointer to the memory location
 	fmt.Printf("%T\n", &name)
+	// Method sets
+	// Types can have methods attached to them
 }
