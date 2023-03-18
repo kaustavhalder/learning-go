@@ -1,6 +1,18 @@
 package main
 
-import "fmt"
+import ("fmt"
+"math")
+type circle struct {
+	radius float64
+}
+
+type shape interface {
+	area() float64
+}
+
+func (c circle) area() float64 {
+	return math.Pi * c.radius * c.radius
+}
 
 func main() {
 	// Every type has its own pointer (type)
