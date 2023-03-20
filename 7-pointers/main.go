@@ -1,5 +1,6 @@
 package main
 
+// This is the part which shows pointers
 import (
 	"fmt"
 	"math"
