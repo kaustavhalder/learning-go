@@ -45,4 +45,5 @@ func main() {
 	fmt.Printf("%T\n", &name)
 	// Method sets
 	// Types can have methods attached to them
+	// fmt.Printf(iota)
 }
